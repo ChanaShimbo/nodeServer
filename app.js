@@ -2,6 +2,7 @@ const express = require('express');
 const furnitureRouter = require('./Routes/furnitureRoutes');
 const categoryRouter = require ('./Routes/categoryRoutes');
 const colorRouter = require('./Routes/colorRoutes');
+const orderItemRouter = require('./Routes/orderItemRoutes');
 const db = require('./connection');
 const bodyParser=require('body-parser');
 const cors=require('cors')
@@ -19,6 +20,7 @@ async function startDB(){
  app.use('/api/furniture',furnitureRouter);
  app.use('/api/category',categoryRouter);
  app.use('/api/color',colorRouter);
+ app.use('/api/orderItem',orderItemRouter);
 
  const port = 3030;
 
